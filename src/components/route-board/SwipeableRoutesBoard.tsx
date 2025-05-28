@@ -211,7 +211,12 @@ const SwipeableRoutesBoard = ({
             onChangeIndex={(idx) => {
               onChangeTab(availableBoardTab[idx]);
             }}
-            style={{ flex: 1, display: "flex" }}
+            style={{
+              flex: 1,
+              display: "flex",
+              minHeight: "64px",
+              height: "100%",
+            }}
             containerStyle={{ flex: 1 }}
             slideCount={coItemDataList.length}
             overscanSlideAfter={1}

@@ -53,10 +53,37 @@ const RouteBoard = () => {
   );
 
   return (
-    <>
-      <RouteList boardTab={boardTab} setBoardTab={setBoardTab} />
-      <RouteInputPad boardTab={boardTab} />
-    </>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+      }}
+    >
+      <Box
+        sx={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          minHeight: "100px",
+          overflowY: "scroll",
+        }}
+      >
+        <RouteList boardTab={boardTab} setBoardTab={setBoardTab} />
+      </Box>
+      <Box
+        sx={{
+          height: "auto",
+          maxHeight: "100%",
+          display: "flex",
+          flexDirection: "column",
+          overflowY: "scroll",
+        }}
+      >
+        <RouteInputPad boardTab={boardTab} />
+      </Box>
+    </Box>
   );
 };
 
